@@ -1,10 +1,11 @@
-#ifndef FILA_H
-#define FILA_H
+#ifndef ATENDIMENTO_H
+#define ATENDIMENTO_H
 #include "cadastro.h"
 
 typedef struct EFila {
     Registro* dados;
     struct EFila* proximo;
+    struct EFila* anterior;
 } EFila;
 
 typedef struct Fila {
@@ -14,5 +15,6 @@ typedef struct Fila {
 } Fila;
 
 void enfileirar(Fila* fila, Registro* paciente);
-Registro* desenfileirar(Fila* fila);
+Registro* desenfileirar(Fila* fila, Registro* paciente);
+void mostrar_fila(Fila* fila);
 #endif // !FILA_H
