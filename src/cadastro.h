@@ -2,6 +2,7 @@
 #define CADASTRO_H
 
 // Definição da estrutura Data
+#include <stdatomic.h>
 typedef struct Data {
     int dia;
     int mes;
@@ -29,8 +30,11 @@ typedef struct Lista {
 } Lista;
 
 // Declarações das funções
-void cadastrar_paciente(Lista* lista, const Registro* paciente); // Passagem por ponteiro (evita cópia desnecessária)
+Elista* criar_Elista(Registro* paciente);
+Lista* criar_lista(); // Cria uma lista vazia
+void cadastrar_paciente(Lista* lista, Registro* paciente); // Passagem por ponteiro (evita cópia desnecessária)
 void remover_paciente(Lista* lista, const char* rg); // 'const' protege o RG de modificações acidentais
 Registro* buscar_paciente(const Lista* lista, const char* rg); // 'const' na lista garante que ela não será modificada
-
+void editar_paciente(Lista* lista, const char* rg, Registro* novo); // 'const' protege o RG de modificações acidentais
+void mostrar_paciente(const Lista* lista); // 'const' protege o paciente de modificações acidentais
 #endif
