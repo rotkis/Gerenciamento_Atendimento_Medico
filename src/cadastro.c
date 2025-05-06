@@ -104,6 +104,7 @@ Registro *buscar_paciente(const Lista *lista, const char *rg) {
     return atual->dados;
 }
 
+
 /* ========================
    Função: editar_paciente
    Proposta: Edita um paciente na lista
