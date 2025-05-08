@@ -136,24 +136,23 @@ void menu_cadastrar(Lista* lista) {
     system("clear || cls");
     printf("=== CADASTRO DE PACIENTES ===\n");
 
-    Registro paciente;
-    Data data;
-    char buffer[100];
+    Registro* paciente = malloc(sizeof(Registro));  // Aloca registro
+        Data* data = malloc(sizeof(Data));             // Aloca data
 
-    printf("Nome: ");
-    scanf(" %99[^\n]", paciente.nome);
+        printf("Nome: ");
+        scanf(" %99[^\n]", paciente->nome);
 
-    printf("Idade: ");
-    scanf("%d", &paciente.idade);
+        printf("Idade: ");
+        scanf("%d", &paciente->idade);
 
-    printf("RG: ");
-    scanf(" %19s", paciente.rg);
+        printf("RG: ");
+        scanf(" %19s", paciente->rg);
 
-    printf("Data de entrada (dia mês ano): ");
-    scanf("%d %d %d", &data.dia, &data.mes, &data.ano);
+        printf("Data de entrada (dia mês ano): ");
+        scanf("%d %d %d", &data->dia, &data->mes, &data->ano);
 
-    paciente.entrada = &data;
-    cadastrar_paciente(lista, &paciente);
+        paciente->entrada = data;  // Associa a data alocada
+        cadastrar_paciente(lista, paciente);
 
     printf("\nPaciente cadastrado com sucesso!\n");
 }

@@ -129,30 +129,6 @@ gerenciador-medico/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/build
 .PHONY : gerenciador-medico/fast
 
-src/abb.o: src/abb.c.o
-.PHONY : src/abb.o
-
-# target to build an object file
-src/abb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/abb.c.o
-.PHONY : src/abb.c.o
-
-src/abb.i: src/abb.c.i
-.PHONY : src/abb.i
-
-# target to preprocess a source file
-src/abb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/abb.c.i
-.PHONY : src/abb.c.i
-
-src/abb.s: src/abb.c.s
-.PHONY : src/abb.s
-
-# target to generate assembly for a file
-src/abb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/abb.c.s
-.PHONY : src/abb.c.s
-
 src/arquivo.o: src/arquivo.c.o
 .PHONY : src/arquivo.o
 
@@ -176,6 +152,54 @@ src/arquivo.s: src/arquivo.c.s
 src/arquivo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/arquivo.c.s
 .PHONY : src/arquivo.c.s
+
+src/atendimento.o: src/atendimento.c.o
+.PHONY : src/atendimento.o
+
+# target to build an object file
+src/atendimento.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o
+.PHONY : src/atendimento.c.o
+
+src/atendimento.i: src/atendimento.c.i
+.PHONY : src/atendimento.i
+
+# target to preprocess a source file
+src/atendimento.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento.c.i
+.PHONY : src/atendimento.c.i
+
+src/atendimento.s: src/atendimento.c.s
+.PHONY : src/atendimento.s
+
+# target to generate assembly for a file
+src/atendimento.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento.c.s
+.PHONY : src/atendimento.c.s
+
+src/atendimento_prioritario.o: src/atendimento_prioritario.c.o
+.PHONY : src/atendimento_prioritario.o
+
+# target to build an object file
+src/atendimento_prioritario.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o
+.PHONY : src/atendimento_prioritario.c.o
+
+src/atendimento_prioritario.i: src/atendimento_prioritario.c.i
+.PHONY : src/atendimento_prioritario.i
+
+# target to preprocess a source file
+src/atendimento_prioritario.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.i
+.PHONY : src/atendimento_prioritario.c.i
+
+src/atendimento_prioritario.s: src/atendimento_prioritario.c.s
+.PHONY : src/atendimento_prioritario.s
+
+# target to generate assembly for a file
+src/atendimento_prioritario.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.s
+.PHONY : src/atendimento_prioritario.c.s
 
 src/cadastro.o: src/cadastro.c.o
 .PHONY : src/cadastro.o
@@ -201,53 +225,53 @@ src/cadastro.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/cadastro.c.s
 .PHONY : src/cadastro.c.s
 
-src/fila.o: src/fila.c.o
-.PHONY : src/fila.o
+src/desfazer.o: src/desfazer.c.o
+.PHONY : src/desfazer.o
 
 # target to build an object file
-src/fila.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/fila.c.o
-.PHONY : src/fila.c.o
+src/desfazer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o
+.PHONY : src/desfazer.c.o
 
-src/fila.i: src/fila.c.i
-.PHONY : src/fila.i
+src/desfazer.i: src/desfazer.c.i
+.PHONY : src/desfazer.i
 
 # target to preprocess a source file
-src/fila.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/fila.c.i
-.PHONY : src/fila.c.i
+src/desfazer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/desfazer.c.i
+.PHONY : src/desfazer.c.i
 
-src/fila.s: src/fila.c.s
-.PHONY : src/fila.s
+src/desfazer.s: src/desfazer.c.s
+.PHONY : src/desfazer.s
 
 # target to generate assembly for a file
-src/fila.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/fila.c.s
-.PHONY : src/fila.c.s
+src/desfazer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/desfazer.c.s
+.PHONY : src/desfazer.c.s
 
-src/heap.o: src/heap.c.o
-.PHONY : src/heap.o
+src/gerenciador.o: src/gerenciador.c.o
+.PHONY : src/gerenciador.o
 
 # target to build an object file
-src/heap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/heap.c.o
-.PHONY : src/heap.c.o
+src/gerenciador.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o
+.PHONY : src/gerenciador.c.o
 
-src/heap.i: src/heap.c.i
-.PHONY : src/heap.i
+src/gerenciador.i: src/gerenciador.c.i
+.PHONY : src/gerenciador.i
 
 # target to preprocess a source file
-src/heap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/heap.c.i
-.PHONY : src/heap.c.i
+src/gerenciador.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.i
+.PHONY : src/gerenciador.c.i
 
-src/heap.s: src/heap.c.s
-.PHONY : src/heap.s
+src/gerenciador.s: src/gerenciador.c.s
+.PHONY : src/gerenciador.s
 
 # target to generate assembly for a file
-src/heap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/heap.c.s
-.PHONY : src/heap.c.s
+src/gerenciador.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.s
+.PHONY : src/gerenciador.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -273,53 +297,29 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/pilha.o: src/pilha.c.o
-.PHONY : src/pilha.o
+src/pesquisa.o: src/pesquisa.c.o
+.PHONY : src/pesquisa.o
 
 # target to build an object file
-src/pilha.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pilha.c.o
-.PHONY : src/pilha.c.o
+src/pesquisa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o
+.PHONY : src/pesquisa.c.o
 
-src/pilha.i: src/pilha.c.i
-.PHONY : src/pilha.i
-
-# target to preprocess a source file
-src/pilha.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pilha.c.i
-.PHONY : src/pilha.c.i
-
-src/pilha.s: src/pilha.c.s
-.PHONY : src/pilha.s
-
-# target to generate assembly for a file
-src/pilha.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pilha.c.s
-.PHONY : src/pilha.c.s
-
-src/utils.o: src/utils.c.o
-.PHONY : src/utils.o
-
-# target to build an object file
-src/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/utils.c.o
-.PHONY : src/utils.c.o
-
-src/utils.i: src/utils.c.i
-.PHONY : src/utils.i
+src/pesquisa.i: src/pesquisa.c.i
+.PHONY : src/pesquisa.i
 
 # target to preprocess a source file
-src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/utils.c.i
-.PHONY : src/utils.c.i
+src/pesquisa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.i
+.PHONY : src/pesquisa.c.i
 
-src/utils.s: src/utils.c.s
-.PHONY : src/utils.s
+src/pesquisa.s: src/pesquisa.c.s
+.PHONY : src/pesquisa.s
 
 # target to generate assembly for a file
-src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/utils.c.s
-.PHONY : src/utils.c.s
+src/pesquisa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gerenciador-medico.dir/build.make CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.s
+.PHONY : src/pesquisa.c.s
 
 # Help Target
 help:
@@ -330,30 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gerenciador-medico"
-	@echo "... src/abb.o"
-	@echo "... src/abb.i"
-	@echo "... src/abb.s"
 	@echo "... src/arquivo.o"
 	@echo "... src/arquivo.i"
 	@echo "... src/arquivo.s"
+	@echo "... src/atendimento.o"
+	@echo "... src/atendimento.i"
+	@echo "... src/atendimento.s"
+	@echo "... src/atendimento_prioritario.o"
+	@echo "... src/atendimento_prioritario.i"
+	@echo "... src/atendimento_prioritario.s"
 	@echo "... src/cadastro.o"
 	@echo "... src/cadastro.i"
 	@echo "... src/cadastro.s"
-	@echo "... src/fila.o"
-	@echo "... src/fila.i"
-	@echo "... src/fila.s"
-	@echo "... src/heap.o"
-	@echo "... src/heap.i"
-	@echo "... src/heap.s"
+	@echo "... src/desfazer.o"
+	@echo "... src/desfazer.i"
+	@echo "... src/desfazer.s"
+	@echo "... src/gerenciador.o"
+	@echo "... src/gerenciador.i"
+	@echo "... src/gerenciador.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pilha.o"
-	@echo "... src/pilha.i"
-	@echo "... src/pilha.s"
-	@echo "... src/utils.o"
-	@echo "... src/utils.i"
-	@echo "... src/utils.s"
+	@echo "... src/pesquisa.o"
+	@echo "... src/pesquisa.i"
+	@echo "... src/pesquisa.s"
 .PHONY : help
 
 

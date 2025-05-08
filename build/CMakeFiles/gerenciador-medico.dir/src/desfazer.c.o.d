@@ -1,11 +1,14 @@
-CMakeFiles/gerenciador-medico.dir/src/main.c.o: \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/main.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/bits/libc-header-start.h /usr/include/features.h \
- /usr/include/features-time64.h /usr/include/bits/wordsize.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
- /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o: \
+ /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.c \
+ /usr/include/stdc-predef.h \
+ /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.h \
+ /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/cadastro.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdatomic.h \
+ /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
@@ -31,13 +34,4 @@ CMakeFiles/gerenciador-medico.dir/src/main.c.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/string.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/cadastro.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdatomic.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento_prioritario.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pesquisa.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.h \
- /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/arquivo.h
+ /usr/include/bits/stdlib-float.h

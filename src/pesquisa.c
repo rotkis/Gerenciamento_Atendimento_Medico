@@ -33,11 +33,24 @@ ABB* criar_arvore() {
     nova->qtde = 0;
     return nova;
 }
+static void liberar_nos(EABB* no) {
+    if (no == NULL) return;
+    liberar_nos(no->esq);
+    liberar_nos(no->dir);
+
+    // Não libere no->dados aqui pois são compartilhados com a lista principal
+    free(no);
+}
 
 void destruir_arvore(ABB* arvore) {
     if (arvore == NULL) return;
-    destruir_no(arvore->raiz);
-    free(arvore);
+
+        // Função auxiliar recursiva para liberar nós
+
+
+        liberar_nos(arvore->raiz);
+        arvore->raiz = NULL;
+        arvore->qtde = 0;
 }
 
 void inserir_abb(ABB* arvore, Registro* paciente, int criterio) {

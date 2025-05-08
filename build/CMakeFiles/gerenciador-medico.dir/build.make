@@ -72,24 +72,10 @@ include CMakeFiles/gerenciador-medico.dir/flags.make
 CMakeFiles/gerenciador-medico.dir/codegen:
 .PHONY : CMakeFiles/gerenciador-medico.dir/codegen
 
-CMakeFiles/gerenciador-medico.dir/src/abb.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
-CMakeFiles/gerenciador-medico.dir/src/abb.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/abb.c
-CMakeFiles/gerenciador-medico.dir/src/abb.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gerenciador-medico.dir/src/abb.c.o"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/abb.c.o -MF CMakeFiles/gerenciador-medico.dir/src/abb.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/abb.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/abb.c
-
-CMakeFiles/gerenciador-medico.dir/src/abb.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/abb.c.i"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/abb.c > CMakeFiles/gerenciador-medico.dir/src/abb.c.i
-
-CMakeFiles/gerenciador-medico.dir/src/abb.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/abb.c.s"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/abb.c -o CMakeFiles/gerenciador-medico.dir/src/abb.c.s
-
 CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
 CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/arquivo.c
 CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o -MF CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/arquivo.c
 
 CMakeFiles/gerenciador-medico.dir/src/arquivo.c.i: cmake_force
@@ -100,10 +86,38 @@ CMakeFiles/gerenciador-medico.dir/src/arquivo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/arquivo.c.s"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/arquivo.c -o CMakeFiles/gerenciador-medico.dir/src/arquivo.c.s
 
+CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
+CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento.c
+CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o -MF CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento.c
+
+CMakeFiles/gerenciador-medico.dir/src/atendimento.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/atendimento.c.i"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento.c > CMakeFiles/gerenciador-medico.dir/src/atendimento.c.i
+
+CMakeFiles/gerenciador-medico.dir/src/atendimento.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/atendimento.c.s"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento.c -o CMakeFiles/gerenciador-medico.dir/src/atendimento.c.s
+
+CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
+CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento_prioritario.c
+CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o -MF CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento_prioritario.c
+
+CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.i"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento_prioritario.c > CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.i
+
+CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.s"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/atendimento_prioritario.c -o CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.s
+
 CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
 CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/cadastro.c
 CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o -MF CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/cadastro.c
 
 CMakeFiles/gerenciador-medico.dir/src/cadastro.c.i: cmake_force
@@ -114,38 +128,38 @@ CMakeFiles/gerenciador-medico.dir/src/cadastro.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/cadastro.c.s"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/cadastro.c -o CMakeFiles/gerenciador-medico.dir/src/cadastro.c.s
 
-CMakeFiles/gerenciador-medico.dir/src/fila.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
-CMakeFiles/gerenciador-medico.dir/src/fila.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/fila.c
-CMakeFiles/gerenciador-medico.dir/src/fila.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/gerenciador-medico.dir/src/fila.c.o"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/fila.c.o -MF CMakeFiles/gerenciador-medico.dir/src/fila.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/fila.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/fila.c
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.c
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o -MF CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.c
 
-CMakeFiles/gerenciador-medico.dir/src/fila.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/fila.c.i"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/fila.c > CMakeFiles/gerenciador-medico.dir/src/fila.c.i
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/desfazer.c.i"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.c > CMakeFiles/gerenciador-medico.dir/src/desfazer.c.i
 
-CMakeFiles/gerenciador-medico.dir/src/fila.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/fila.c.s"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/fila.c -o CMakeFiles/gerenciador-medico.dir/src/fila.c.s
+CMakeFiles/gerenciador-medico.dir/src/desfazer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/desfazer.c.s"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/desfazer.c -o CMakeFiles/gerenciador-medico.dir/src/desfazer.c.s
 
-CMakeFiles/gerenciador-medico.dir/src/heap.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
-CMakeFiles/gerenciador-medico.dir/src/heap.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/heap.c
-CMakeFiles/gerenciador-medico.dir/src/heap.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/gerenciador-medico.dir/src/heap.c.o"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/heap.c.o -MF CMakeFiles/gerenciador-medico.dir/src/heap.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/heap.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/heap.c
+CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
+CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/gerenciador.c
+CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o -MF CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/gerenciador.c
 
-CMakeFiles/gerenciador-medico.dir/src/heap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/heap.c.i"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/heap.c > CMakeFiles/gerenciador-medico.dir/src/heap.c.i
+CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.i"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/gerenciador.c > CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.i
 
-CMakeFiles/gerenciador-medico.dir/src/heap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/heap.c.s"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/heap.c -o CMakeFiles/gerenciador-medico.dir/src/heap.c.s
+CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.s"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/gerenciador.c -o CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.s
 
 CMakeFiles/gerenciador-medico.dir/src/main.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
 CMakeFiles/gerenciador-medico.dir/src/main.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/main.c
 CMakeFiles/gerenciador-medico.dir/src/main.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/gerenciador-medico.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/gerenciador-medico.dir/src/main.c.o"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/main.c.o -MF CMakeFiles/gerenciador-medico.dir/src/main.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/main.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/main.c
 
 CMakeFiles/gerenciador-medico.dir/src/main.c.i: cmake_force
@@ -156,56 +170,42 @@ CMakeFiles/gerenciador-medico.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/main.c.s"
 	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/main.c -o CMakeFiles/gerenciador-medico.dir/src/main.c.s
 
-CMakeFiles/gerenciador-medico.dir/src/pilha.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
-CMakeFiles/gerenciador-medico.dir/src/pilha.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pilha.c
-CMakeFiles/gerenciador-medico.dir/src/pilha.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/gerenciador-medico.dir/src/pilha.c.o"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/pilha.c.o -MF CMakeFiles/gerenciador-medico.dir/src/pilha.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/pilha.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pilha.c
+CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
+CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pesquisa.c
+CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o -MF CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pesquisa.c
 
-CMakeFiles/gerenciador-medico.dir/src/pilha.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/pilha.c.i"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pilha.c > CMakeFiles/gerenciador-medico.dir/src/pilha.c.i
+CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.i"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pesquisa.c > CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.i
 
-CMakeFiles/gerenciador-medico.dir/src/pilha.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/pilha.c.s"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pilha.c -o CMakeFiles/gerenciador-medico.dir/src/pilha.c.s
-
-CMakeFiles/gerenciador-medico.dir/src/utils.c.o: CMakeFiles/gerenciador-medico.dir/flags.make
-CMakeFiles/gerenciador-medico.dir/src/utils.c.o: /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/utils.c
-CMakeFiles/gerenciador-medico.dir/src/utils.c.o: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/gerenciador-medico.dir/src/utils.c.o"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gerenciador-medico.dir/src/utils.c.o -MF CMakeFiles/gerenciador-medico.dir/src/utils.c.o.d -o CMakeFiles/gerenciador-medico.dir/src/utils.c.o -c /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/utils.c
-
-CMakeFiles/gerenciador-medico.dir/src/utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gerenciador-medico.dir/src/utils.c.i"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/utils.c > CMakeFiles/gerenciador-medico.dir/src/utils.c.i
-
-CMakeFiles/gerenciador-medico.dir/src/utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/utils.c.s"
-	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/utils.c -o CMakeFiles/gerenciador-medico.dir/src/utils.c.s
+CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.s"
+	/sbin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/src/pesquisa.c -o CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.s
 
 # Object files for target gerenciador-medico
 gerenciador__medico_OBJECTS = \
-"CMakeFiles/gerenciador-medico.dir/src/abb.c.o" \
 "CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o" \
+"CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o" \
+"CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o" \
 "CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o" \
-"CMakeFiles/gerenciador-medico.dir/src/fila.c.o" \
-"CMakeFiles/gerenciador-medico.dir/src/heap.c.o" \
+"CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o" \
+"CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o" \
 "CMakeFiles/gerenciador-medico.dir/src/main.c.o" \
-"CMakeFiles/gerenciador-medico.dir/src/pilha.c.o" \
-"CMakeFiles/gerenciador-medico.dir/src/utils.c.o"
+"CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o"
 
 # External object files for target gerenciador-medico
 gerenciador__medico_EXTERNAL_OBJECTS =
 
-gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/abb.c.o
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/arquivo.c.o
+gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/atendimento.c.o
+gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/atendimento_prioritario.c.o
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/cadastro.c.o
-gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/fila.c.o
-gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/heap.c.o
+gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/desfazer.c.o
+gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/gerenciador.c.o
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/main.c.o
-gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/pilha.c.o
-gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/utils.c.o
+gerenciador-medico: CMakeFiles/gerenciador-medico.dir/src/pesquisa.c.o
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/build.make
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/compiler_depend.ts
 gerenciador-medico: CMakeFiles/gerenciador-medico.dir/link.txt

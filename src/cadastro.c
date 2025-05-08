@@ -34,14 +34,19 @@ Elista* criar_Elista(Registro *paciente) {
    Proposta: Cadastra um novo paciente na lista
    ======================== */
 void cadastrar_paciente(Lista *lista, Registro *paciente) {
+    if (!lista || !paciente) return;
+
     Elista* novo = criar_Elista(paciente);
+    if (!novo) return;
     Elista* anterior = NULL;
     Elista* atual = lista->inicio;
+    int cont = 0;
     while (atual != NULL && strcmp(atual->dados->rg, paciente->rg) < 0) {
+        cont++;
         anterior = atual;
         atual = atual->proximo;
     }
-    if (strcmp(atual->dados->rg, paciente->rg) == 0) {
+    if (strcmp(atual->dados->rg, paciente->rg) == 0 && cont > 0) {
         printf("Paciente já cadastrado\n");
         free(novo);
         return;
