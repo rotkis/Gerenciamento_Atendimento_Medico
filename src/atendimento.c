@@ -33,7 +33,7 @@ void enfileirar(Fila *fila, Registro *paciente){
     fila->qtde++;
 }
 
-Registro* desenfileirar(Fila *fila, Registro *paciente){
+Registro* desenfileirar(Fila *fila){
     if (fila->qtde == 0) return NULL;
 
     EFila *liberar = fila->head;

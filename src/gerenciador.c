@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 void inicializar_gerenciador(Gerenciador* gerenciador) {
-    gerenciador->lista_pacientes = criar_lista();
+    criar_lista(&gerenciador->lista_pacientes);
     gerenciador->fila_comum = *cria_fila();
     inicializar_heap(&gerenciador->fila_prioritaria);
 }

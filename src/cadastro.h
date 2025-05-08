@@ -31,10 +31,12 @@ typedef struct Lista {
 
 // Declarações das funções
 Elista* criar_Elista(Registro* paciente);
-Lista* criar_lista(); // Cria uma lista vazia
+void criar_lista(Lista* lista); // Cria uma lista vazia
 void cadastrar_paciente(Lista* lista, Registro* paciente); // Passagem por ponteiro (evita cópia desnecessária)
 void remover_paciente(Lista* lista, const char* rg); // 'const' protege o RG de modificações acidentais
 Registro* buscar_paciente(const Lista* lista, const char* rg); // 'const' na lista garante que ela não será modificada
 void editar_paciente(Lista* lista, const char* rg, Registro* novo); // 'const' protege o RG de modificações acidentais
 void mostrar_paciente(const Lista* lista); // 'const' protege o paciente de modificações acidentais
+// Adicione este protótipo
+void liberar_lista(Lista* lista);
 #endif

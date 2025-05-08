@@ -7,16 +7,12 @@
    Função: criar_lista
    Proposta: Cria uma nova lista vazia
    ======================== */
-Lista* criar_lista() {
-    Lista* lista = (Lista*)malloc(sizeof(Lista));
-    if (lista == NULL) {
-        printf("Erro ao criar lista\n");
-        exit(1);
-    }
-    lista->inicio = NULL;
-    lista->qtde = 0;
-    return lista;
-}
+   void criar_lista(Lista* lista) {
+       if (lista == NULL) return;
+
+       lista->inicio = NULL;
+       lista->qtde = 0;
+   }
 
 /* ========================
    Função: criar_Elista
@@ -153,4 +149,32 @@ void mostrar_paciente(const Lista *lista) {
         printf("Entrada: %d/%d/%d\n", atual->dados->entrada->dia, atual->dados->entrada->mes, atual->dados->entrada->ano);
         atual = atual->proximo;
     }
+}
+
+void liberar_lista(Lista* lista) {
+    if (lista == NULL) return;
+
+    Elista* atual = lista->inicio;
+    while (atual != NULL) {
+        Elista* proximo = atual->proximo;
+
+        // Libera a estrutura Data primeiro
+        if (atual->dados != NULL && atual->dados->entrada != NULL) {
+            free(atual->dados->entrada);
+        }
+
+        // Libera o Registro
+        if (atual->dados != NULL) {
+            free(atual->dados);
+        }
+
+        // Libera o nó da lista
+        free(atual);
+
+        atual = proximo;
+    }
+
+    // Reseta os valores da lista
+    lista->inicio = NULL;
+    lista->qtde = 0;
 }

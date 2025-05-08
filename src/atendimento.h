@@ -17,6 +17,6 @@ typedef struct Fila {
 EFila *cria_Efila(Registro *paciente);
 Fila *cria_fila();
 void enfileirar(Fila* fila, Registro* paciente);
-Registro* desenfileirar(Fila* fila, Registro* paciente);
+Registro* desenfileirar(Fila* fila);
 void mostrar_fila(Fila* fila);
 #endif // !FILA_H

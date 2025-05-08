@@ -9,7 +9,7 @@
 typedef struct Gerenciador {
     Fila fila_comum;          // Fila de atendimento normal
     Heap fila_prioritaria;    // Heap para atendimento prioritário
-    Lista *lista_pacientes;    // Lista principal de cadastro
+    Lista lista_pacientes;    // Lista principal de cadastro
 } Gerenciador;
 
 // Inicializa todas as estruturas
