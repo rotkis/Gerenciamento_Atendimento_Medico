@@ -14,6 +14,8 @@ typedef struct Fila {
     int qtde;
 } Fila;
 
+EFila *cria_Efila(Registro *paciente);
+Fila *cria_fila();
 void enfileirar(Fila* fila, Registro* paciente);
 Registro* desenfileirar(Fila* fila, Registro* paciente);
 void mostrar_fila(Fila* fila);

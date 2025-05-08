@@ -34,19 +34,19 @@ void enfileirar(Fila *fila, Registro *paciente){
 }
 
 Registro* desenfileirar(Fila *fila, Registro *paciente){
-    if (fila->qtde == 0) {
-      return NULL;
-    }
+    if (fila->qtde == 0) return NULL;
 
     EFila *liberar = fila->head;
     Registro *valor = liberar->dados;
+
     if (fila->qtde == 1) {
-      fila->head = NULL;
-      fila->tail = NULL;
+            fila->head = NULL;
+            fila->tail = NULL;
     } else {
-      fila->head->proximo->anterior = NULL;
-      fila->head = fila->head->proximo;
-    }
+        fila->head = fila->head->proximo;
+        fila->head->anterior = NULL;
+   }
+
     fila->qtde--;
     free(liberar);
     return valor;
