@@ -1,3 +1,0 @@
-/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles/gerenciador-medico.dir
-/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles/edit_cache.dir
-/home/manga/faculdade/estrutura/Gerenciamento_Atendimento_Medico/build/CMakeFiles/rebuild_cache.dir

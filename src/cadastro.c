@@ -46,11 +46,7 @@ void cadastrar_paciente(Lista *lista, Registro *paciente) {
         anterior = atual;
         atual = atual->proximo;
     }
-    if (strcmp(atual->dados->rg, paciente->rg) == 0 && cont > 0) {
-        printf("Paciente já cadastrado\n");
-        free(novo);
-        return;
-    }
+
     if (anterior == NULL){
         lista->inicio = novo;
     } else {

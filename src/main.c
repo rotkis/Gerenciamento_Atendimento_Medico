@@ -360,7 +360,7 @@ void menu_sobre() {
     system("clear || cls");
     printf("=== SOBRE O SISTEMA ===\n");
     printf("Gerenciador de Atendimento Médico\n");
-    printf("Desenvolvido por: [Seu Nome]\n");
+    printf("Desenvolvido por: Arthur Carvalho Rotkis RA: 22.123.116-0 e Marcus Vinicius Zelenato RA: 22.223.084-9\n");
     printf("Curso: Ciência da Computação\n");
     printf("Disciplina: Estrutura de Dados\n");
     printf("Professor: Luciano Rossi\n");
