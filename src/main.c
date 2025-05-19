@@ -28,6 +28,10 @@ void menu_pesquisa(ABB* arvore, Lista* lista);
 void menu_desfazer(Fila* fila, Pilha* pilha);
 void menu_sobre();
 
+/* ========================
+    Função: main
+    Proposta: Ponto de entrada do programa. Inicializa as estruturas de dados e apresenta o menu principal ao usuário.
+    ======================== */
 int main() {
     // Inicialização das estruturas
     Lista lista_pacientes;
@@ -112,12 +116,15 @@ int main() {
 
     // Liberação de memória
     liberar_lista(&lista_pacientes);
-    // Adicionar liberação para outras estruturas...
     liberar_pilha(pilha_operacoes);
 
     return 0;
 }
 
+/* ========================
+    Função: menu_principal
+    Proposta: Exibe o menu principal de opções para o usuário.
+    ======================== */
 void menu_principal() {
     system("clear || cls"); // Limpa a tela (Linux/Windows)
     printf("=== GERENCIADOR DE ATENDIMENTO MÉDICO ===\n");
@@ -132,31 +139,39 @@ void menu_principal() {
     printf("9. Sair\n");
 }
 
+/* ========================
+    Função: menu_cadastrar
+    Proposta: Permite ao usuário cadastrar um novo paciente, coletando seus dados e adicionando-o à lista.
+    ======================== */
 void menu_cadastrar(Lista* lista) {
     system("clear || cls");
     printf("=== CADASTRO DE PACIENTES ===\n");
 
-    Registro* paciente = malloc(sizeof(Registro));  // Aloca registro
-        Data* data = malloc(sizeof(Data));             // Aloca data
+    Registro* paciente = malloc(sizeof(Registro));   // Aloca registro
+    Data* data = malloc(sizeof(Data));             // Aloca data
 
-        printf("Nome: ");
-        scanf(" %99[^\n]", paciente->nome);
+    printf("Nome: ");
+    scanf(" %99[^\n]", paciente->nome);
 
-        printf("Idade: ");
-        scanf("%d", &paciente->idade);
+    printf("Idade: ");
+    scanf("%d", &paciente->idade);
 
-        printf("RG: ");
-        scanf(" %19s", paciente->rg);
+    printf("RG: ");
+    scanf(" %19s", paciente->rg);
 
-        printf("Data de entrada (dia mês ano): ");
-        scanf("%d %d %d", &data->dia, &data->mes, &data->ano);
+    printf("Data de entrada (dia mês ano): ");
+    scanf("%d %d %d", &data->dia, &data->mes, &data->ano);
 
-        paciente->entrada = data;  // Associa a data alocada
-        cadastrar_paciente(lista, paciente);
+    paciente->entrada = data;   // Associa a data alocada
+    cadastrar_paciente(lista, paciente);
 
     printf("\nPaciente cadastrado com sucesso!\n");
 }
 
+/* ========================
+    Função: menu_atendimento
+    Proposta: Implementa o menu de atendimento comum, permitindo enfileirar, desenfileirar e mostrar a fila.
+    ======================== */
 void menu_atendimento(Fila* fila, Lista* lista, Pilha* pilha) {
     int opcao;
     do {
@@ -218,6 +233,10 @@ void menu_atendimento(Fila* fila, Lista* lista, Pilha* pilha) {
     } while (opcao != 4);
 }
 
+/* ========================
+    Função: menu_atendimento_prioritario
+    Proposta: Implementa o menu de atendimento prioritário, permitindo adicionar à fila, atender o próximo e mostrar a fila.
+    ======================== */
 void menu_atendimento_prioritario(Heap* heap, Lista* lista) {
     int opcao;
     do {
@@ -270,6 +289,10 @@ void menu_atendimento_prioritario(Heap* heap, Lista* lista) {
     } while (opcao != 4);
 }
 
+/* ========================
+    Função: menu_pesquisa
+    Proposta: Implementa o menu de pesquisa de pacientes, permitindo visualizar a lista ordenada por diferentes critérios.
+    ======================== */
 void menu_pesquisa(ABB* arvore, Lista* lista) {
     int opcao, criterio;
     do {
@@ -324,6 +347,10 @@ void menu_pesquisa(ABB* arvore, Lista* lista) {
     } while (opcao != 5);
 }
 
+/* ========================
+    Função: menu_desfazer
+    Proposta: Implementa a funcionalidade de desfazer a última operação realizada na fila de atendimento comum.
+    ======================== */
 void menu_desfazer(Fila* fila, Pilha* pilha) {
     system("clear || cls");
     printf("=== DESFAZER OPERAÇÃO ===\n");
@@ -345,17 +372,45 @@ void menu_desfazer(Fila* fila, Pilha* pilha) {
         switch(ultima.tipo) {
             case OPERACAO_ENFILEIRAR:
                 printf("Desfazendo ENFILEIRAMENTO de %s...\n", ultima.paciente->nome);
-                desenfileirar(fila);
+                // Para desfazer um enfileiramento, removemos o último da fila (já que a pilha registra a ação de enfileirar)
+                // Nota: Assumindo que a fila é FIFO e a pilha registra na ordem correta.
+                // Uma implementação mais robusta poderia armazenar o nó removido.
+                if (fila->tail != NULL) {
+                    EFila* temp = fila->tail;
+                    fila->tail = fila->tail->anterior;
+                    if (fila->tail != NULL) {
+                        fila->tail->proximo = NULL;
+                    } else {
+                        fila->head = NULL;
+                    }
+                    free(temp);
+                    fila->qtde--;
+                }
                 break;
 
             case OPERACAO_DESENFILEIRAR:
                 printf("Desfazendo DESENFILEIRAMENTO de %s...\n", ultima.paciente->nome);
-                enfileirar(fila, ultima.paciente);
+                // Para desfazer um desenfileiramento, readicionamos o paciente ao início da fila (já que era o primeiro a sair)
+                EFila* novo_head = malloc(sizeof(EFila));
+                novo_head->dados = ultima.paciente;
+                novo_head->proximo = fila->head;
+                novo_head->anterior = NULL;
+                if (fila->head != NULL) {
+                    fila->head->anterior = novo_head;
+                } else {
+                    fila->tail = novo_head;
+                }
+                fila->head = novo_head;
+                fila->qtde++;
                 break;
         }
     }
 }
 
+/* ========================
+    Função: menu_sobre
+    Proposta: Exibe informações sobre o sistema e seus desenvolvedores.
+    ======================== */
 void menu_sobre() {
     system("clear || cls");
     printf("=== SOBRE O SISTEMA ===\n");

@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* ========================
+    Função: carregar_pacientes
+    Proposta: Carrega os dados dos pacientes de um arquivo para a lista de pacientes.
+    ======================== */
 int carregar_pacientes(const char* dados, Lista* lista) {
     FILE* arquivo = fopen(dados, "r");
     if (arquivo == NULL) {
@@ -13,7 +17,6 @@ int carregar_pacientes(const char* dados, Lista* lista) {
 
     char linha[256];
     while (fgets(linha, sizeof(linha), arquivo)) {
-        // Aloca memória para um novo registro
         Registro* paciente = (Registro*)malloc(sizeof(Registro));
         Data* data = (Data*)malloc(sizeof(Data));
 
@@ -23,14 +26,13 @@ int carregar_pacientes(const char* dados, Lista* lista) {
             return 0;
         }
 
-        // Lê os dados do arquivo (formato: nome;idade;rg;dia;mes;ano)
         int campos_lidos = sscanf(linha, "%99[^;];%d;%19[^;];%d;%d;%d",
-            paciente->nome,
-            &paciente->idade,
-            paciente->rg,
-            &data->dia,
-            &data->mes,
-            &data->ano);
+                                paciente->nome,
+                                &paciente->idade,
+                                paciente->rg,
+                                &data->dia,
+                                &data->mes,
+                                &data->ano);
 
         if (campos_lidos != 6) {
             free(paciente);
@@ -46,6 +48,10 @@ int carregar_pacientes(const char* dados, Lista* lista) {
     return 1; // Retorna 1 em caso de sucesso
 }
 
+/* ========================
+    Função: salvar_pacientes
+    Proposta: Salva os dados da lista de pacientes em um arquivo.
+    ======================== */
 int salvar_pacientes(const char* dados, Lista* lista) {
     FILE* arquivo = fopen(dados, "w");
     if (arquivo == NULL) {
@@ -56,12 +62,12 @@ int salvar_pacientes(const char* dados, Lista* lista) {
     Elista* atual = lista->inicio;
     while (atual != NULL) {
         fprintf(arquivo, "%s;%d;%s;%d;%d;%d\n",
-            atual->dados->nome,
-            atual->dados->idade,
-            atual->dados->rg,
-            atual->dados->entrada->dia,
-            atual->dados->entrada->mes,
-            atual->dados->entrada->ano);
+                atual->dados->nome,
+                atual->dados->idade,
+                atual->dados->rg,
+                atual->dados->entrada->dia,
+                atual->dados->entrada->mes,
+                atual->dados->entrada->ano);
 
         atual = atual->proximo;
     }

@@ -2,7 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Cria uma nova pilha vazia
+/* ========================
+    Função: criar_pilha
+    Proposta: Cria e inicializa uma nova pilha vazia para armazenar operações.
+    ======================== */
 Pilha* criar_pilha() {
     Pilha* nova = malloc(sizeof(Pilha));
     nova->topo = NULL;
@@ -10,7 +13,10 @@ Pilha* criar_pilha() {
     return nova;
 }
 
-// Empilha uma operação
+/* ========================
+    Função: empilhar
+    Proposta: Adiciona uma nova operação ao topo da pilha.
+    ======================== */
 void empilhar(Pilha* pilha, Operacao operacao) {
     EPilha* novo = malloc(sizeof(EPilha));
     novo->dados = operacao;
@@ -19,7 +25,10 @@ void empilhar(Pilha* pilha, Operacao operacao) {
     pilha->qtde++;
 }
 
-// Desempilha a última operação
+/* ========================
+    Função: desempilhar
+    Proposta: Remove e retorna a operação do topo da pilha.
+    ======================== */
 Operacao desempilhar(Pilha* pilha) {
     if (pilha->topo == NULL) {
         Operacao vazia = {0};
@@ -35,7 +44,10 @@ Operacao desempilhar(Pilha* pilha) {
     return operacao;
 }
 
-// Mostra todas as operações no histórico
+/* ========================
+    Função: mostrar_operacoes
+    Proposta: Exibe todas as operações presentes na pilha, do topo para a base.
+    ======================== */
 void mostrar_operacoes(Pilha* pilha) {
     printf("\n--- Histórico de Operações (%d) ---\n", pilha->qtde);
 
@@ -61,7 +73,10 @@ void mostrar_operacoes(Pilha* pilha) {
     printf("-----------------------------\n");
 }
 
-// Libera a memória da pilha
+/* ========================
+    Função: liberar_pilha
+    Proposta: Libera toda a memória alocada para a pilha e seus nós.
+    ======================== */
 void liberar_pilha(Pilha* pilha) {
     while (pilha->topo != NULL) {
         desempilhar(pilha);

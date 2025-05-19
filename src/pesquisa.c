@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Funções auxiliares
+/* ========================
+    Função: comparar_registros (static)
+    Proposta: Compara dois registros de pacientes com base no critério de ordenação fornecido.
+    ======================== */
 static int comparar_registros(Registro* a, Registro* b, int criterio) {
     switch(criterio) {
         case 0: // Ano
@@ -19,6 +22,10 @@ static int comparar_registros(Registro* a, Registro* b, int criterio) {
     }
 }
 
+/* ========================
+    Função: destruir_no (static)
+    Proposta: Libera recursivamente a memória de um nó da Árvore de Busca Binária (ABB) e seus filhos.
+    ======================== */
 static void destruir_no(EABB* no) {
     if (no == NULL) return;
     destruir_no(no->esq);
@@ -26,33 +33,43 @@ static void destruir_no(EABB* no) {
     free(no);
 }
 
-// Implementações
+/* ========================
+    Função: criar_arvore
+    Proposta: Cria e inicializa uma nova Árvore de Busca Binária (ABB) vazia.
+    ======================== */
 ABB* criar_arvore() {
     ABB* nova = malloc(sizeof(ABB));
     nova->raiz = NULL;
     nova->qtde = 0;
     return nova;
 }
+
+/* ========================
+    Função: liberar_nos (static)
+    Proposta: Libera recursivamente a memória dos nós da ABB, sem liberar os dados dos pacientes, pois são gerenciados por outra estrutura.
+    ======================== */
 static void liberar_nos(EABB* no) {
     if (no == NULL) return;
     liberar_nos(no->esq);
     liberar_nos(no->dir);
-
-    // Não libere no->dados aqui pois são compartilhados com a lista principal
     free(no);
 }
 
+/* ========================
+    Função: destruir_arvore
+    Proposta: Libera toda a memória alocada para a Árvore de Busca Binária (ABB).
+    ======================== */
 void destruir_arvore(ABB* arvore) {
     if (arvore == NULL) return;
-
-        // Função auxiliar recursiva para liberar nós
-
-
-        liberar_nos(arvore->raiz);
-        arvore->raiz = NULL;
-        arvore->qtde = 0;
+    liberar_nos(arvore->raiz);
+    arvore->raiz = NULL;
+    arvore->qtde = 0;
 }
 
+/* ========================
+    Função: inserir_abb
+    Proposta: Insere um novo paciente na Árvore de Busca Binária (ABB) com base no critério de ordenação fornecido.
+    ======================== */
 void inserir_abb(ABB* arvore, Registro* paciente, int criterio) {
     EABB* novo = malloc(sizeof(EABB));
     novo->dados = paciente;
@@ -84,7 +101,10 @@ void inserir_abb(ABB* arvore, Registro* paciente, int criterio) {
     arvore->qtde++;
 }
 
-// Funções de percurso (implementar as outras de forma similar)
+/* ========================
+    Função: em_ordem_ano (static)
+    Proposta: Realiza um percurso em ordem na ABB e exibe os pacientes ordenados por ano de registro.
+    ======================== */
 static void em_ordem_ano(EABB* no) {
     if (no == NULL) return;
     em_ordem_ano(no->esq);
@@ -92,11 +112,18 @@ static void em_ordem_ano(EABB* no) {
     em_ordem_ano(no->dir);
 }
 
+/* ========================
+    Função: mostrar_por_ano
+    Proposta: Inicia o percurso em ordem para exibir os pacientes ordenados por ano de registro.
+    ======================== */
 void mostrar_por_ano(ABB* arvore) {
     em_ordem_ano(arvore->raiz);
 }
 
-// Funções de percurso (implementar as outras de forma similar)
+/* ========================
+    Função: em_ordem_mes (static)
+    Proposta: Realiza um percurso em ordem na ABB e exibe os pacientes ordenados por mês de registro.
+    ======================== */
 static void em_ordem_mes(EABB* no) {
     if (no == NULL) return;
     em_ordem_mes(no->esq);
@@ -104,11 +131,18 @@ static void em_ordem_mes(EABB* no) {
     em_ordem_mes(no->dir);
 }
 
+/* ========================
+    Função: mostrar_por_mes
+    Proposta: Inicia o percurso em ordem para exibir os pacientes ordenados por mês de registro.
+    ======================== */
 void mostrar_por_mes(ABB* arvore) {
     em_ordem_mes(arvore->raiz);
 }
 
-// Funções de percurso (implementar as outras de forma similar)
+/* ========================
+    Função: em_ordem_dia (static)
+    Proposta: Realiza um percurso em ordem na ABB e exibe os pacientes ordenados por dia de registro.
+    ======================== */
 static void em_ordem_dia(EABB* no) {
     if (no == NULL) return;
     em_ordem_dia(no->esq);
@@ -116,11 +150,18 @@ static void em_ordem_dia(EABB* no) {
     em_ordem_dia(no->dir);
 }
 
+/* ========================
+    Função: mostrar_por_dia
+    Proposta: Inicia o percurso em ordem para exibir os pacientes ordenados por dia de registro.
+    ======================== */
 void mostrar_por_dia(ABB* arvore) {
     em_ordem_dia(arvore->raiz);
 }
 
-// Funções de percurso (implementar as outras de forma similar)
+/* ========================
+    Função: em_ordem_idade (static)
+    Proposta: Realiza um percurso em ordem na ABB e exibe os pacientes ordenados por idade.
+    ======================== */
 static void em_ordem_idade(EABB* no) {
     if (no == NULL) return;
     em_ordem_idade(no->esq);
@@ -128,12 +169,18 @@ static void em_ordem_idade(EABB* no) {
     em_ordem_idade(no->dir);
 }
 
+/* ========================
+    Função: mostrar_por_idade
+    Proposta: Inicia o percurso em ordem para exibir os pacientes ordenados por idade.
+    ======================== */
 void mostrar_por_idade(ABB* arvore) {
     em_ordem_idade(arvore->raiz);
 }
 
-// Implementar mostrar_por_mes, mostrar_por_dia, mostrar_por_idade de forma similar
-
+/* ========================
+    Função: buscar_paciente_abb
+    Proposta: Busca um paciente na Árvore de Busca Binária (ABB) pelo seu RG.
+    ======================== */
 Registro* buscar_paciente_abb(ABB* arvore, const char* rg) {
     EABB* atual = arvore->raiz;
     while (atual != NULL) {

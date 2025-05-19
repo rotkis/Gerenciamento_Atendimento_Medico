@@ -3,13 +3,20 @@
 #include <string.h>
 #include <stdlib.h>
 
+/* ========================
+    Função: inicializar_gerenciador
+    Proposta: Inicializa a estrutura do gerenciador, criando a lista de pacientes, a fila comum e o heap prioritário.
+    ======================== */
 void inicializar_gerenciador(Gerenciador* gerenciador) {
     criar_lista(&gerenciador->lista_pacientes);
     gerenciador->fila_comum = *cria_fila();
     inicializar_heap(&gerenciador->fila_prioritaria);
 }
 
-// Move um paciente da fila comum para a prioritária
+/* ========================
+    Função: mover_para_fila_prioritaria
+    Proposta: Move um paciente da fila de atendimento comum para a fila de atendimento prioritário, buscando-o pelo RG.
+    ======================== */
 void mover_para_fila_prioritaria(Gerenciador* gerenciador, const char* rg) {
     // Busca o paciente na fila comum
     EFila* atual = gerenciador->fila_comum.head;
@@ -39,24 +46,25 @@ void mover_para_fila_prioritaria(Gerenciador* gerenciador, const char* rg) {
     printf("Paciente com RG %s não encontrado na fila comum.\n", rg);
 }
 
-// Move um paciente da fila prioritária para a comum
+/* ========================
+    Função: mover_para_fila_comum
+    Proposta: Move um paciente da fila de atendimento prioritário para a fila de atendimento comum, buscando-o pelo RG.
+    ======================== */
 void mover_para_fila_comum(Gerenciador* gerenciador, const char* rg) {
-    // Busca o paciente no heap
-        for (int i = 0; i < gerenciador->fila_prioritaria.qtde; i++) {
-            if (strcmp(gerenciador->fila_prioritaria.dados[i]->rg, rg) == 0) {
-                Registro* paciente = gerenciador->fila_prioritaria.dados[i];
+    // Busca o paciente no heap prioritário
+    for (int i = 0; i < gerenciador->fila_prioritaria.qtde; i++) {
+        if (strcmp(gerenciador->fila_prioritaria.dados[i]->rg, rg) == 0) {
+            Registro* paciente = gerenciador->fila_prioritaria.dados[i];
 
-                // Substitui o paciente pelo último elemento
-                gerenciador->fila_prioritaria.dados[i] = gerenciador->fila_prioritaria.dados[gerenciador->fila_prioritaria.qtde - 1];
-                gerenciador->fila_prioritaria.qtde--;
+            // Remove o paciente do heap prioritário substituindo-o pelo último elemento e reorganizando o heap
+            gerenciador->fila_prioritaria.dados[i] = gerenciador->fila_prioritaria.dados[gerenciador->fila_prioritaria.qtde - 1];
+            gerenciador->fila_prioritaria.qtde--;
+            heapify(&gerenciador->fila_prioritaria, i);
 
-                // Reorganiza o heap a partir do nó alterado (usando peneirar)
-                heapify(&gerenciador->fila_prioritaria, i);
-
-                // Adiciona à fila comum
-                enfileirar(&gerenciador->fila_comum, paciente);
-                return;
-            }
+            // Adiciona o paciente à fila comum
+            enfileirar(&gerenciador->fila_comum, paciente);
+            return;
         }
-        printf("Paciente não encontrado na fila prioritária.\n");
+    }
+    printf("Paciente não encontrado na fila prioritária.\n");
 }
